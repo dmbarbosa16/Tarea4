@@ -49,7 +49,7 @@
 				return {
 					id: id,
 					values: data.map(function(d) {
-						return {date: parseTime(d.Year), edad: d[id]};
+						return {date: parseTime(d.Year), edad: +d[id]};
 					})
 				};
 			});
