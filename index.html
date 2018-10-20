@@ -19,7 +19,7 @@
     </style>
   </head>
   <body>
-   <font color="green" size="11px">Calentamiento Global</font><br/>
+   <font color="green" size="14px">Suicidios en Colombia</font><br/>
    Comportamiento de los suicidios en Colombia.<br/>
    Autor: Diana Milena Barbosa <br/>
 	<svg width="960" height="500"></svg>
@@ -40,9 +40,9 @@
 		var line = d3.line()
 			.curve(d3.curveBasis)
 			.x(function(d) { return x(d.date); })
-			.y(function(d) { return y(d.suicidios); });
+			.y(function(d) { return y(d.temperature); });
 	
-		d3.csv("GLB.Ts+dSST_v3.csv", type, function(error, data) {
+		d3.csv("https://raw.githubusercontent.com/dmbarbosa16/Tarea4/master/Tasa_de_intento_de_suicidio_en_Colombia.csv", type, function(error, data) {
 			if(error) throw error;
 						
 			var cities = data.columns.slice(130).map(function(id) {
